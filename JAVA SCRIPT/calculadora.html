@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <script>
+        function suma(a,b) {
+            return a+b;
+        }
+
+        function caculadora(){
+            var a = parseInt(document.getElementById("op1").value);
+            var b = parseInt(document.getElementById("op2").value);
+            var c = suma(a,b);
+            document.getElementById("resultat").innerHTML=c;
+        }
+
+        function resetear() {
+            document.getElementById("op1").value=0;
+            document.getElementById("op2").value=0;
+            document.getElementById("resultat").innerHTML="";
+        }
+    </script>
+</head>
+<body>
+    Operando 1:
+    <input type="text" id="op1" value="0"/><br>
+    Operando 2:
+    <input type="text" id="op2" value="0"/><br>
+    <button onclick="caculadora()">SUMA</button>
+    <button onclick="resetear()">RESET</button>
+    <br>
+    <p id="resultat"></p>
+</body>
+</html>
