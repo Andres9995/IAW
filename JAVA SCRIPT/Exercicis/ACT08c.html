@@ -1,0 +1,32 @@
+<html>
+
+<head></head>
+
+<body>
+
+<script type="text/javascript">
+    var x=prompt('INSERTA el valor de X: ');
+    var y=prompt('INSERTA EL VALOR DE  Y: ');
+    x=parseInt(x);
+    y=parseInt(y);
+
+    if (x > 0 && y > 0 ){
+        document.write("PRIMER CUADRANT TOTS DOS SON MES GRANS A 0:" + x + " " + y);
+    }
+    else if (x < 0 && y > 0) {
+        document.write("SEGUNDO CUADRANTE X MENOR QUE CERO, Y MAYOR QUE 0:" + x + " " + y);
+    }
+    else if (x <0 && y < 0) {
+        document.write("TERCER CUADRANTE LOS DOS SON MENORES A 0 : " + x + " " + y);
+    }
+    else if (x > 0 && y < 0) {
+        document.write("QUARTO CUADRANTE SI X ES MAYOR A 0 Y ES MENOR : " + x + " " + y);
+    }
+    else {
+        document.write("AMBOS SON IGUALES: " + x +" " + y );
+    }
+
+</script>
+
+</body>
+</html>
