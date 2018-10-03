@@ -1,0 +1,31 @@
+<html>
+
+<head></head>
+
+<body>
+
+<script type="text/javascript">
+    var numero1=prompt('Pun un numero 1: ');
+    var numero2=prompt('Pun un numero 2: ');
+    var numero3=prompt('Pun un numero 3: ');
+    numero1=parseInt(numero1);
+    numero2=parseInt(numero2);
+    numero3=parseInt(numero3);
+
+    if (numero1 == numero2 && numero1 == numero3){
+        document.write("NUMERO 1, NUMERO2, NUMERO 3 son iguales y valen: " + numero1);
+    }
+    else if (numero1 > numero2 && numero1 > numero3){
+        document.write("NUMERO 1 ES EL MAS GRANDE, Y VALE:" + numero1);
+    }
+    else if (numero2 > numero1 && numero2 > numero3){
+        document.write("NUMERO 2 ES EL MAS GRANDE, Y VALE:" + numero2);
+    }
+    else {
+        document.write("Numero 3 es el mas grande, y vale: " + numero3);
+    }
+
+</script>
+
+</body>
+</html>
