@@ -1,0 +1,27 @@
+<html>
+
+<head></head>
+
+<body>
+
+<script type="text/javascript">
+    var salario=prompt('INSERTA el salario base: ');
+    var tiempo=prompt('INSERTA los años que llevas trabajando: ');
+    salario=parseInt(salario);
+    tiempo=parseInt(tiempo);
+
+    if (salario < 500 && tiempo >= 10 ){
+        document.write("500`€` mas 10 anyos equivaldia a:" + (salario + ((salario*20)/100)) + " €, por tus " +  tiempo + "anyos");
+    }
+    else if (salario < 500 && tiempo < 10) {
+        document.write("Menos de 500€ menos 10 anyos equivaldia a:" + (salario + ((salario*5)/100)) + " €, por tus " +  tiempo + "anyos");
+    }
+    else if (salario >= 500) {
+        document.write("Mas de 500€ no tiene incremento:" + salario);
+    }
+
+
+</script>
+
+</body>
+</html>
