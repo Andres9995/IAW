@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+        var numero;
+        suma=0;
+
+        do{
+           numero=prompt('introduce un numero :','');
+           numero=parseInt(numero);
+
+           suma=suma+numero;
+           if (suma<0) {
+               document.write("el resultado de la suma es negativo " + suma + "");
+           }
+           else if (suma>0){
+               document.write("el resultat de la suma es positiu " + suma+"");
+           }
+           else {
+               document.write("el resultat de la suma es cero " + suma + " ");
+           }
+           document.write('<br>');
+        } while(numero!=9999);
+
+    </script>
+
+</body>
+</html>
