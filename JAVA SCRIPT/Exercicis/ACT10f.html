@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+    var x;
+    x=1;
+    var altura = 0;
+    var promedio=0;
+
+    while (x<=5) {
+        altura = prompt('introduzca una altura: ', ' ');
+        altura=parseFloat(altura);
+        promedio=(promedio+altura);
+        x=x+1;
+    }
+    document.write("La altura media es" + (promedio/5)+ "");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+    var num = parseInt(0);
+    var nota;
+    var aprobados = parseInt(0);
+    var suspendidos = parseInt(0);
+    while (num < 10){
+        num = num + 1;
+        nota = prompt("introduce una nota");
+        if (nota >= parseInt(5)){
+
+            aprobados = aprobados + parseInt(1);
+
+        }else if (nota <= parseInt(5)){
+
+            suspendidos = suspendidos + parseInt(1);
+        }
+
+    }
+    document.write("han aprobado: " + aprobados);
+    document.write("<br>");
+    document.write("han suspendido: " + suspendidos);
+
+</script>
+</body>
+</html>
