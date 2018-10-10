@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+    var numero=1;
+    var a = 0;
+    var b = 0;
+    var num1 = 0;
+    var num2 = 0;
+    var num3 = 0;
+
+    while (numero<=2) {
+        if(numero==1){
+            alert("SERIE A");
+        }else {
+            alert("SERIE B");
+        }
+       num1=parseInt(prompt("INSERTA NUMERO 1: "));
+       num2=parseInt(prompt("INSERTA NUMERO 2: "));
+       num3=parseInt(prompt("INSERTA NUMERO 3: "));
+
+       if(numero==1){
+           a = num1+num2+num3;
+       }
+       else {
+           b = num1+num2+num3;
+       }
+
+        numero++;
+    }
+
+    if (a > b){
+        document.write("GRUPO A ES MAYOR A B CON LA SUMA: "+ a);
+    }
+    else if(a<b){
+        document.write("GRUPO B ES MAYOR A A CON LA SUMA: "+ b);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>LLISTA DE PARRAFOS</h1>
+    <p>PARRAFO A</p>
+    <p>PARRAFO B</p>
+    <p>PARRAFO C</p>
+    <p>PARRAFO D</p>
+    <hr/>
+    <script>
+        var ps = document.getElementsByTagName('p');
+        console.log(ps);
+        document.write("<h4>" + ps + "</h4>")
+
+        document.write("numero de paragrafos" + ps.length + "<br/><br/>");
+        for (var i=0; i<ps.length; i++){
+            var p = ps.item(i);
+            document.write("<b>" +p+ "</b><br/>");
+            p.style.backgroundColor="red";
+            document.write(p.childNodes[0].data+"<br/>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+    var x;
+    x=1;
+    var salario = 0;
+    var suma=0;
+
+    var numMenos1000=0;
+    var numMas1000=0;
+
+    while (x<=5) {
+        salario = prompt('introduzca el salario: ', ' ');
+        salario=parseFloat(salario);
+        if (salario >= 500 && salario <= 1000){
+            numMenos1000++;
+        }
+        else if(salario>1000){
+            numMas1000++;
+        }
+        suma=suma+salario;
+        x++;
+    }
+    document.write("Teballadors entre 500 i 1000: " + numMenos1000 + "<br><br>");
+    document.write("Teballadors mes de 1000: " + numMas1000 + "<br><br>");
+    document.write("Total salario: " + suma + "<br><br>");
+</script>
+</body>
+</html>
