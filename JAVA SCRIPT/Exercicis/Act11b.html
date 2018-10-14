@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Prueba JavaScript</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+        var id=0;
+        var edad=0;
+        var sexo=0;
+        var personas=0;
+        var hombres=0;
+        var mujeres=0;
+        var trabajadores=0;
+        var edad_mayor=0;
+        var edad_menor=1000;
+        var id_vieja=0;
+        var id_joven=0;
+
+        do {
+            id=prompt('introduzca un id :','');
+            id=parseInt(id);
+
+            edad=prompt('introduzca una edad :','');
+            edad=parseInt(edad);
+
+            sexo=prompt('introduzca un sexo :','hombre / mujer');
+
+            if (id !=0){personas++}
+
+            if (sexo!="hombre"){mujeres++}
+            else (hombres++);
+
+            if (sexo!="mujer" && edad >=18 && edad <=65)
+            {trabajadores++}
+
+            if (edad_mayor< edad && sexo!="hombre")
+            {edad_mayor=edad;
+                id_vieja=id;
+            }
+
+            if (edad_menor > edad && sexo!="mujer" )
+            {edad_menor=edad;
+                id_joven=id;}
+
+        } while(id!=0);
+
+        document.write("el numero de personas es "+personas+"<br>");
+        document.write("el numero de hombres es "+hombres+"<br>");
+        document.write("el numero de mujeres es "+mujeres+"<br>");
+        document.write("hombres currantes "+trabajadores+"<br>");
+        document.write("la mujer con el id "+id_vieja+" es la  mayor y tiene "+edad_mayor+" <br>");
+        document.write("el hombre con el id "+id_joven+ " es el mayor y tiene esta edad: "+edad_menor+"<br>");
+
+
+
+</script>
+
+</body>
+</html>
