@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ACT10I</title>
+</head>
+<body style="background:#EEE">
+<script type="text/javascript">
+    var x=1
+    var numero=0;
+    var par=0;
+    var impar = 0;
+
+    while (x<=5) {
+        numero=prompt("introduce un numero: ");
+        numero=parseInt(numero);
+        if (parseInt(numero)%2 !=0) {
+            (impar=impar+1);
+        }
+        else {
+            (par=par+1);
+        }
+        x=x+1
+    }
+    document.write( "pares: " + par + "<br>");
+    document.write("impares: " + impar + "<br>");
+</script>
+</body>
+</html>
