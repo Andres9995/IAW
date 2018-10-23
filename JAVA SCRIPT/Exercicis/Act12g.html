@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a;
+    var notaa=0;
+    var mediaa=0;
+    var b;
+    var notab=0;
+    var mediab=0;
+    var c;
+    var notac=0;
+    var mediac=0;
+    var mediatotal=0;
+    for (a=1; a<=5; a++){
+        notaa=prompt("Introduce una nota A: ");
+        notaa=parseFloat(notaa);
+        mediaa=(mediaa+notaa);
+    }
+
+    for (b=1; b<=6; b++){
+        notab=prompt("Introduce una nota B: ");
+        notab=parseFloat(notab);
+        mediab=(mediab+notab);
+    }
+
+    for (c=1; c<=11; c++){
+        notac=prompt("Introduce una nota C: ");
+        notac=parseFloat(notac);
+        mediac=(mediac+notac);
+    }
+    mediaa = mediaa/5;
+    mediab= mediab/6;
+    mediac= mediac/11;
+    mediatotal= ((mediaa + mediab + mediac)/3)
+
+    document.write("Total media primer grupo A: " + mediaa + "<br>");
+    document.write("Total media segon grupo B : " + mediab + "<br>");
+    document.write("Total media segon grupo C : " + mediac + "<br>");
+    document.write("Total media de todos los grupos: " + mediatotal + "<br>");
+</script>
+</body>
+</html>
