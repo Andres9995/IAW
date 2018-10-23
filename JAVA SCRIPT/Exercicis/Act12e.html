@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var i;
+        var lado1=0;
+        var lado2=0;
+        var lado3=0;
+
+        var equilatero=0;
+        var isoceles=0;
+        var escaleno=0;
+
+
+        for(i=1; i<=4; i++){
+          lado1=prompt('introduce la longitud de un lado A: ' , '10');
+          lado1=parseInt(lado1);
+
+          lado2=prompt('introduce la longitud de un lado B: ' , '10');
+          lado2=parseInt(lado1);
+
+          lado3=prompt('introduce la longitud de un lado C: ' , '10');
+          lado3=parseInt(lado1);
+          
+          if (lado1== lado2 && lado2==lado3){
+              document.write("riangulo equiatero <br>");
+              (equilatero++);
+          } 
+          else if (lado1==lado2 && lado3!=lado1){
+              document.write("triangulo isoceles <br>");
+              (isoceles ++);
+          }
+          else if (lado1!=lado2 && lado2!=lado3 && lado1!=lado3){
+              document.write("Triangulo es escaleno <br>");
+              (escaleno++);
+          }
+          document.write("triangulo equilateros: " + equilatero + "<br>");
+          document.write("triangulo isosceles " + isoceles + "<br>");
+          document.write("triangulo escaleno: " + escaleno + "<br>");
+          if (equilatero>escaleno && equilatero>isoceles){
+              document.write("hay mas triangulos equilateros <br>");
+          }
+          else if (isoceles>equilatero && isoceles>escaleno){
+              document.write("Hay mas triangulos isosceles <br>")
+          }
+          else document.write("hay mas escalenos <br>");
+        }
+
+    </script>
+</body>
+</html>
