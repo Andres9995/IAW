@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var numero=0;
+    var n1=0;
+    var n2=0;
+    var n3=0;
+
+    n1=prompt("introdude el numero 1: " + "<br>");
+    n1=parseFloat(n1);
+
+    n2=prompt("introdude el numero 2: " + "<br>");
+    n2=parseFloat(n2);
+
+    n3=prompt("introdude el numero 3: " + "<br>");
+    n3=parseFloat(n3);
+
+    numero=minimo(n1,n2,n3);
+
+    function minimo(n1,n2,n3) {
+        if (n1<n2 && n1<n3) return n1;
+        else if (n2<n1 && n2<n3) return n2;
+            else return n3;
+        
+    }
+
+    document.write(minimo(n1,n2,n3) + " es el numero mas pequeño");
+
+</script>
+</body>
+</html>
