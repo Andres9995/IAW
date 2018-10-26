@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var n1=0;
+    var n2=0;
+    var n3=0;
+
+    n1=prompt("introdude el numero 1: " + "<br>");
+    n1=parseInt(n1);
+
+    n2=prompt("introdude el numero 2: " + "<br>");
+    n2=parseInt(n2);
+
+    n3=prompt("introdude el numero 3: " + "<br>");
+    n3=parseInt(n3);
+
+
+    function ordenar (n1,n2,n3) {
+        var mayor;
+        var medio;
+        var menor;
+
+        if (n1 <= n2 && n1 <= n3) {
+            menor = n1;
+        }
+        if (n2 <= n1 && n2 <= n3) {
+            menor = n2;
+        }
+        if (n3<= n1 && n3<=n2){
+            menor=n3;
+        }
+
+        if (n1 >= n2 && n1 >= n3) {
+            mayor = n1;
+        }
+        if (n2 >= n1 && n2 >= n3) {
+            mayor = n2;
+        }
+        if (n3>= n1 && n3 >=n2){
+            mayor=n3;
+        }
+
+        if ((n1== mayor && n2 == menor) || (n1==menor && n2==mayor)) {
+            medio = n3;
+        }
+        if ((n2 == mayor && n3 == menor) || (n2==menor && n3==mayor)) {
+            medio = n1;
+        }
+        if ((n3== mayor && n1 ==menor) || (n3==menor && n1==mayor)){
+            medio=n2;
+        }
+        document.write(menor+ ', ' + medio+ '; ' + mayor);
+    }
+    ordenar(n1, n2,n3);
+</script>
+</body>
+</html>
