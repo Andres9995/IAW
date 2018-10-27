@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var n1=0
+   var n2=0
+   var n3=0
+
+   n1=prompt("introdude el numero 1: " + "<br>");
+   n1=parseFloat(n1);
+
+   n2=prompt("introdude el numero 2: " + "<br>");
+   n2=parseFloat(n2);
+
+   n3=prompt("introdude el numero 3: " + "<br>");
+   n3=parseFloat(n3);
+
+   function promedio (n1,n2,n3) {
+       return ((n1+n2+n3)/3);
+   }
+
+   numero = promedio(n1, n2, n3);
+
+   document.write(" promedio " + numero + " ");
+
+</script>
+</body>
+</html>
