@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+
+    </script>
+</head>
+<body>
+<a id="a1" href="">www.espartaco.com</a>
+<br>
+<button id="b1">youtube</button>
+<button id="b2">bing</button>
+<button id="b3">google.com</button>
+<script>
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            $("#a1").attr("href", "http://www.youtube.com");
+        })
+        $("#b2").click(function () {
+            $("#a1").attr("href", "http://www.bing.com");
+        })
+        $("#b3").click(function () {
+            $("#a1").attr("href", "http://www.google.com");
+        })
+    })
+</script>
+</body>
+</html>
