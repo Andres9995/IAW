@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+   function checkNumChars() {
+       var usuario
+       var email
+       var comentarios
+
+       usuario = document.getElementById('usuario').value;
+       email = document.getElementById('email').value;
+       comentarios = document.getElementById('comentarios').value;
+       alert("Su usuarios es " + usuario);
+       alert("Su email es " + email);
+       alert("Estos son sus comentarios "+ comentarios);
+   }
+</script>
+<form>
+    usuario <input type="text" id="usuario"><br>
+    correo <input type="email" id="email"><br>
+    comentarios <input type="text" id="comentarios"><br>
+    <button type="button" value="check" onclick="checkNumChars()">dale para validar</button>
+</form>
+
+</body>
+</html>
