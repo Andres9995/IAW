@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+        $(document).ready(function () {
+
+        })
+    </script>
+</head>
+<body>
+<table border="1" width="50%">
+    <tr>
+        <td class="td1">asdasdasd</td>
+        <td class="td1">asadasdasd</td>
+        <td class="td1">asdasdasdas</td>
+    </tr>
+</table>
+
+<table border="1" width="50%">
+    <tr>
+        <td class="td2">asdasdasd</td>
+        <td class="td2">asadasdasd</td>
+        <td class="td2">asdasdasdas</td>
+    </tr>
+</table>
+<script>
+    $(document).ready(function () {
+        $(".td1").click(function () {
+            $(this).css("background-color", "red");
+        })
+        $(".td2").click(function () {
+            $(this).css("font-size", "20px");
+        })})
+</script>
+</body>
+</html>

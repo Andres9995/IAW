@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+        $(document).ready(function () {
+
+        })
+    </script>
+</head>
+<body>
+<h1>0</h1>
+<h1>1</h1>
+<h1>2</h1>
+<p>5</p>
+<p>6</p>
+<button id="b1">PEQUEÑO</button>
+<button id="b2">MEDIANO</button>
+<button id="b3">GRANDE</button>
+<script>
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            $("p:odd, h1:odd").css("font-size", "10px");
+        })
+         $("#b2").click(function () {
+            $("p:odd, h1:odd").css("font-size", "15px");
+        })
+
+        $("#b3").click(function () {
+            $("p:odd, h1:odd").css("font-size", "20px");
+        })
+    })
+</script>
+</body>
+</html>
