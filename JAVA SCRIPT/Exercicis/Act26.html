@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function passwd(control) {
+        var psw="";
+        var psw=document.getElementById('password').value;
+
+        if (psw.length < 7 || psw.length > 20){
+            alert("la contraseña que has puesto es menor que 7 caracteres o mas de 20")
+        }
+        else alert("la contraseña cumple las condiciones")
+    }
+</script>
+<form>
+    correo <input type="text" id="nombre"><br>
+    password <input type="password" id="password" onfocus="pasw()">
+    <br>
+    <input type="button" value="comprovar" onclick="passwd()">
+</form>
+
+</body>
+</html>
