@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+
+    </script>
+    <style>
+        .estilo1{
+            color:red;
+        }
+
+        .estilo2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<table  border="1" width="100%">
+    <thead>
+        <tr>
+            <td>uno</td>
+            <td>dos</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>tres</td>
+            <td>quatro</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+            $("td").mouseenter(function () {
+                $(this).css("background", "red");
+            })
+            $("td").mouseleave(function () {
+                $(this).css("background", "white");
+            })
+    })
+</script>
+</body>
+</html>
