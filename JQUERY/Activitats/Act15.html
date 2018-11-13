@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+
+    </script>
+    <style>
+        .div1{
+            background: blue;
+            width:800px ;
+            height: 70px;
+        }
+        .div2{
+            background: red;
+            width:250px ;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="midiv" class="div1">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+           $("#midiv").dblclick(function () {
+               $(this).toggleClass("div1").toggleClass("div2");
+            })
+    })
+</script>
+</body>
+</html>
