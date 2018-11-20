@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<p>tu mes mes</p>
+<div id="contenido"></div>
+<button id="b1">MONDONGO</button>
+<script>
+    var num=0;
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            num++;
+            var d = $("<div/>",{id:num});
+            var i = $("<input/>",{type:"text", value:num});
+            var b = $("<button/>", {class:"bu", text:"ELIMINAR", click:function(){
+                $(this).parent().remove();
+            }});
+            var br = $("<br/>");
+            d.append(i, b);
+            $("#contenido").append(d, br);
+        });
+
+
+    })
+</script>
+</body>
+</html>

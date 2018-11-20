@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+        $(document).ready(function () {
+
+        })
+    </script>
+
+</head>
+<body>
+<p>Article</p>
+<input type="text">
+<input type="text"> <br><br><br>
+
+<script>
+    $(document).ready(function () {
+        $("input").focus(function () {
+            $(this).css("color", "red");
+        })
+        $("input").blur(function () {
+            $(this).css("color", "blue");
+        })
+    })
+</script>
+</body>
+</html>
