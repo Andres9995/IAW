@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+        $(document).ready(function () {
+
+        })
+    </script>
+    <style>
+        #div1{
+            background: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    $(document).ready(function () {
+        $("#div1").click(function () {
+            $(this).fadeTo("1000", 0.2);
+        })
+        $("#div1").dblclick(function () {
+            $(this).fadeTo("500", 1);
+        })
+    })
+
+</script>
+</body>
+</html>

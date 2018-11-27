@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.min.js">
+        $(document).ready(function () {
+
+        })
+    </script>
+    <style>
+        #div1{
+            background: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="div1"></div>
+<p id="oculto">oculto</p>
+<script>
+    $(document).ready(function () {
+        $("#div1").click(function () {
+            $(this).hide(200, muestrap);
+        })
+    })
+    $("#oculto").hide();
+
+    function muestrap() {
+        $("#oculto").show(3000);
+    }
+</script>
+</body>
+</html>
