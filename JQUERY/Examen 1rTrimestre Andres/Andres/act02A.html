@@ -1,0 +1,170 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+table, th, td {
+    border: 2px solid black;
+    height: 80px;
+    text-align: center;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    alt: Cruz;
+    border: 0px;
+}
+</style>
+</head>
+<body>
+<script>
+    //APARCAR
+    $(document).ready(function () {
+        $("#b1").click(function parking() {
+            var avui = new Date();
+            var dt = avui.getDate();
+            var dia = avui.getDate();
+            var hour = avui.getHours();
+            var minut = avui.getMinutes();
+            var hora = avui.toLocaleTimeString();
+
+        var matr = $("#t1").val();
+        var colum = $("#s1").val();
+        var fila = $("#s2").val();
+        var lloc = colum + "" + fila;
+
+        var Z1 = (document.getElementById(lloc).getAttribute('src'));
+            if (Z1 == "car.png"){
+                alert("aquest lloc ja esta ocupat");
+            }
+            else {
+                if (lloc == $("#s1").val()+""+$("#s2").val()){
+                    imagen="car.png"; + "<br>";
+                    text=matr;
+
+                    document.getElementById(lloc).src=imagen;
+                }
+
+                $("#log").append(dia+" "+ hora+" " + "-"+ "Cocho"+ matr + "esta en "+ colum +" "+ fila + "esta aparcat"+ "<br>" )
+            };
+        });
+    })
+
+    //destacionar
+    $(document).ready(function () {
+        $("#b2").click(function parking() {
+            var avui = new Date();
+            var dt = avui.getDate();
+            var dia = avui.getDate();
+            var hour = avui.getHours();
+            var minut = avui.getMinutes();
+            var hora = avui.toLocaleTimeString();
+
+            var matr = $("#t1").val();
+            var colum = $("#s1").val();
+            var fila = $("#s2").val();
+            var lloc = colum + "" + fila;
+
+            var Z1 = (document.getElementById(lloc).getAttribute('src'));
+            if (Z1 == "empty.png"){
+                alert("aquest lloc esta lliure");
+            }
+            else {
+                if (lloc == $("#s1").val()+""+$("#s2").val()){
+                    imagen="empty.png";
+                    text=" ";
+
+                    document.getElementById(lloc).src=imagen;
+                    document.getElementById(lloc).innerHTML = text;
+                }
+
+                $("#log").append(dia+" "+ hora+" " + "-"+ "Cocho "+ matr + " esta en "+ colum +" "+ fila + " se ha ido "+ "<br>" )
+            };
+        });
+    })
+
+
+    // CONTADOR
+    $(document).ready(function () {
+        $("#b3").click(function contar() {
+            var contador=0;
+            for (var a=0; a<9; a++){
+                var colum = $("#s1").val();
+                var fila = $("#s2").val();
+                var lloc= colum +""+fila;
+
+                var Z1 = $("td:eq("+a+") img").attr("src");
+                if (Z1 == "car.png"){
+                    contador = parseInt(contador) + 1;
+                }
+            };
+            alert("Total de vehicles aparcats "+contador);
+        })
+    })
+</script>
+<h1>PARKING</h1>
+<form action="#" style="background-color:#AAAAAA;">
+<fieldset>
+<legend>Parking Admininstration</legend>
+<b>Matricula:</b> <input type="text" id="t1" value="" size="5" />
+<b>Plaza de parking:</b>
+    <select id="s1">
+        <option value=" "></option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+    </select>
+    <select id="s2">
+    <option value=" "></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    </select>
+<button id="b1" >PARKING</button>
+<button id="b2" >SORTIR</button>
+<button id="b3" >NUM COCHOS</button>
+<button id="b4" >SORT</button>
+</fieldset>
+</form>
+<hr/>
+<div style="width:60%; height:400px; float:left; background-color: blue">
+    <fieldset>
+        <legend>PARKING</legend>
+        <table style="width:100%">
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img  id="A1" src="empty.png"/> <p id="pa1"></p> </td>
+                <td><img  id="B1" src="empty.png"/> <p id="pb1"></p> </td>
+                <td><img  id="C1" src="empty.png"/> <p id="pc1"></p> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img  id="A2" src="empty.png"/> <p id="pa2"></p> </td>
+                <td><img  id="B2" src="empty.png"/> <p id="pb2"></p> </td>
+                <td><img  id="C2" src="empty.png"/> <p id="pc2"></p> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img  id="A3" src="empty.png"/> <p id="pa3"></p> </td>
+                <td><img  id="B3" src="empty.png"/> <p id="pb3"></p> </td>
+                <td><img  id="C3" src="empty.png"/> <p id="pc3"></p> </td>
+            </tr>
+
+        </table>
+    </fieldset>
+</div>
+<div style="width:40%; height:400px; background-color:yellow; float:right; padding-top:10px;">
+    <h1>Historial</h1>
+    <div id="log" style="background-color:white; height:250px; width:80%; margin:auto; overflow-y:scroll;">
+
+    </div>
+</div>
+</body>
+</html>

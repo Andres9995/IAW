@@ -1,0 +1,126 @@
+
+
+body{
+    background: url('imagenes/fondo3.jpg') no-repeat fixed center;
+    background-size: 100% 100%;
+    font-family: Arial;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin: 3% 0 0 25%;
+    width: 50%;
+    position: fixed;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color:  #f2f2f2;
+    text-align: center;
+    padding: 12px 43px;
+    margin: 0px;
+    text-decoration: none;
+    background-color: #c2c2a3;
+}
+
+nav li a:hover {
+    background-color: #f2f2f2;;
+    color:#c2c2a3;
+}
+
+#central{
+    background: #ebebe0;
+    width: 50%;
+    float: right;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#central4iz{
+    float: left;
+    width: 10%;
+}
+
+#central3{
+    float: left;
+    width: 80%;
+}
+
+#central5de{
+    float: right;
+    width: 10%;
+ }
+#inicio{
+    margin-top: 11%;
+     height: 36px;
+
+}
+
+#central2{
+    text-align: center;
+    font-family: Tahoma;
+}
+
+#central21{
+    background: #ADA6A2;
+    border-radius: 22px;
+}
+#central22{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #BBB8B7;
+    border-radius: 22px;
+}
+
+#casco1{
+    text-align: left;
+}
+
+#casco1 p{
+    width: 45%;
+}#boton1{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: #423E3D;
+    border-radius: 6px;
+    border: 2px solid white;
+    float:right;
+    margin: -135px 59px 0px 0px;
+ }
+
+ #boton1:hover{
+     background-color: #767373;
+     text-decoration: none;
+ }
+
+
+#central21 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#derecho{
+    width: 25%;
+    float: right;
+}
+
+#izquierda{
+    width: 25%;
+    float:left;
+}
+
+#footer{
+    background-color: #f2f2f2;
+    clear: both;
+    opacity: 0.5;
+    text-align: center;
+}

@@ -1,0 +1,133 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body style="background:#6DB0EE">
+    <script>
+        //VALIDACIO
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                texte();
+                fecha();
+                num();
+                email();
+                casilles();
+                seleccionar();
+            })
+        })
+
+        //Validar texte
+        function texte(){
+            if ( $("#t1").val()==""){
+                $("#t1").css("backgroundColor","red");
+                return false;
+            }
+            else {
+                $("#t1").css("backgroundColor","green");
+                $("#m1").css("backgroundColor","green");
+                $("#m1").text("Va bee")
+                return true;
+            }
+        };
+
+        //validar fetcha naixament
+        function fecha() {
+            function validarfetcha(ValueD)
+            {
+                var a = new RegExp(/\b\d{1,2}[\/-]\d{1,2}[\/-]\d{4}\b/);
+                return a.test(ValueD);
+            }
+            var b=$('#t2').val();
+            if(validarfetcha(b))
+            {
+                $("#t2").css("backgroundColor","green");
+                $("#m2").css("backgroundColor","green")
+                $("#m2").text("Va bee")
+            }
+            else
+            {
+                $("#t2").css("backgroundColor","red")
+            }
+        };
+
+        //validar numero
+        function num() {
+            if ( $("#t3").val()==""){
+                $("#t3").css("backgroundColor","red");
+
+            }
+            else if ( $("#t3").val() < 0 || $("#t3").val() > 99){
+                $("#t3").css("backgroundColor","red");
+
+            }
+            else {
+                $("#t3").css("backgroundColor","green");
+                $("#m3").css("backgroundColor","green")
+                $("#m3").text("Va bee");
+            }
+        };
+
+        //validar correu
+        function email(){
+            var a = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+            var b=($("#t4").val());
+            if( !a.test(b) ) {
+                $("#t4").css("background-color","red");
+                return false;
+            }
+            else {$("#t4").css("background-color","green")
+                $("#m4").text("va bee")};
+            return true;
+        };
+
+        //Validar casilles
+        function casilles(){
+            var c=$(":checked").length;
+            if (c!=4){
+                $("#check").css("backgroundColor","red");
+                return false;
+            }
+            else {
+                $("#m5").css("backgroundColor","green");
+                $("#m5").text("Va bee")
+                return true;
+            }
+        };
+
+        //POSAR A 0
+        $(document).ready(function(){
+            $("#b2").click(function Borrar(){
+                location.reload();
+            });
+        });
+        
+    </script>
+<h1>FORM VALIDATOR</h1>
+<form action="#">
+    <fieldset>
+        <legend>Form Fields</legend>
+        <b>TEXTE (OBLIGATORI):</b> <input type="text" id="t1" value="" size="10" /><span id="m1"></span><br/><br/>
+        <b>FECHA(DD/MM/YYYY):</b> <input type="text" id="t2" value="" size="10" /><span id="m2"></span><br/><br/>
+        <b>NUMERO ENTRE 0 I 99:</b> <input type="text" id="t3" value="" size="5" /><span id="m3"></span><br/><br/>
+        <b>EMAIL:</b> <input type="text" id="t4" value="" size="10" /><span id="m4"></span><br/><br/>
+        <b id="check">CHECK THREE:</b>
+        <input type="checkbox" id="cb1" value="a"/> Option A
+        <input type="checkbox" id="cb2" value="b"/> Option B
+        <input type="checkbox" id="cb3" value="c"/> Option C
+        <input type="checkbox" id="cb4" value="d"/> Option D
+        <span id="m5"></span><br/><br/>
+        <b>SELECT:</b>
+        <select id="s1">
+            <option value="0">Select one</option>
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+            <option value="C">Option C</option>
+            <option value="D">Option D</option>
+        </select>
+        <span id="m6"></span><br/><br/>
+        <input type="submit" value="VALIDAR" id="b1" />&nbsp;<input type="reset" id="b2" value="RESET" />
+    </fieldset>
+</form>
+</body>
+</html>

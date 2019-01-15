@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        .red{
+            color:red;
+        }
+        .blue{
+            color:blue;
+        }
+        .green{
+            color:green;
+        }
+        .verdana{
+            font-family: Verdana;
+        }
+        .courier {
+            font-family:Courier;
+        }
+        .arial {
+            font-family:Arial;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <legend>EDITOR DE ESTILOS</legend>
+    <textarea cols="100" rows="10" id="txt"></textarea><br/>
+    FONT:
+    <select id="selfont">
+        <option value="courier">COURIER</option>
+        <option value="verdana">VERDANA</option>
+        <option value="arial">ARIAL</option>
+    </select>
+    COLOR:
+    <select id="selcolor">
+        <option value="red">ROJO</option>
+        <option value="green">VERDE</option>
+        <option value="blue">AZUL</option>
+    </select>
+    TAMANYO:
+    <input type="text" value="10" id="txtsize" size="4"/>
+    <button type="button" id="b1"> APLICAR ESTILOS</button>
+</form>
+<div id="container">
+</div>
+<script>
+    $(document).ready(function () {
+        $("#b1").click(function () {
+            var numPs= 0;
+            var pSelect=null;
+
+            var t = $("#txt").val();
+            var c = $("#selcolor").val();
+            var f = $("#selfont").val();
+            var s = $("#txtsize").val();
+
+            numPs++;
+            var idP = "p"+numPs;
+            var newP=$("<p>",{id:idP, text:t, click:function () {
+                pSelect=$(this);
+                }
+            });
+            newP.addClass(c).addClass(f).css("fontSize", s+"px");
+            $("#container").append(newP);
+        })
+    })
+</script>
+</body>
+</html>
