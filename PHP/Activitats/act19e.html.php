@@ -18,7 +18,6 @@ $rs=mysqli_query($con, $sql);
 ?>
 <form action="act19e.php" method="GET">
     <select name="categoria">
-        <option value="0">ALL</option>
         <?php
             while($row=mysqli_fetch_array($rs)){
                 echo "<option value='".$row['code']."'>".$row['name']."</option>";
