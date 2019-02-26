@@ -8,7 +8,7 @@
     </style>
 </head>
 <body>
-<h1>Cambia nombre de un curso</h1>
+<h1>REBAJAR GANGAS</h1>
 
 <?php
 $con = mysqli_connect("localhost","andres","123456","shop");

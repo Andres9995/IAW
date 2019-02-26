@@ -13,7 +13,7 @@ else {
 
     $sql= "UPDATE `article` SET `price`=`price`/2 WHERE bargain=1";
     mysqli_query($con,$sql);
-    echo "ya se ha cambiado el nombre del curso";
+    echo "ya han bajado los precios de las gangas en 50%";
     
     mysqli_close($con);
 
